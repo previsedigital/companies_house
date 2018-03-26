@@ -43,3 +43,7 @@ class CompaniesHouseTestCase(unittest.TestCase):
     def test_flat_result(self):
         result = self.api.get_company(COMPANY_NUMBER, flatten=True)
         self.assertIsInstance(result, dict)
+
+    def test_follow_links(self):
+        result = self.api.get_company(COMPANY_NUMBER, follow_links=True)
+        self.assertIsInstance(result, dict)

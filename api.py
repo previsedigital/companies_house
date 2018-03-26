@@ -19,7 +19,22 @@ class CompaniesHouseAPIBase:
     def __init__(self, api_key: str) -> None:
         self._api_key = api_key
 
-    def get(self, query: str, flatten: bool=False) -> Optional[dict]:
+    def _follow_links(self, obj: Union[dict, list]) -> Union[dict, list]:
+        if isinstance(obj, dict) and 'links' in obj:
+            for link_name, link_query in obj['links'].items():
+                if link_name == 'self':
+                    pass
+                else:
+                    if link_name in obj:
+                        raise Exception(f'Link name shadows builtin: {link_name}')
+                    obj[link_name] = self.get(link_query, follow_links=True)
+            return obj
+        elif isinstance(obj, list):
+            return [self._follow_links(o) for o in obj]
+        else:
+            return obj
+
+    def get(self, query: str, flatten: bool=False, follow_links: bool=False) -> Optional[dict]:
         """
         Run a GET query against the Companies' House API
         :param query: the query, e.g. "company/09117429"
@@ -36,6 +51,8 @@ class CompaniesHouseAPIBase:
 
             raise requests.HTTPError(response.status_code, response.text)
         result = json.JSONDecoder().decode(response.text)
+        if follow_links:
+            result = self._follow_links(result)
         if flatten:
             result = flatten_dict(result)
         return result
@@ -67,7 +84,7 @@ def _make_function(method_name: str, http_request_str: str, description: str) ->
     fn_name = '_'.join(map(lambda s: str.replace(s, '-', '_'), filter(lambda x: '{' not in x, base_parts)))
     params = list(map(lambda s: str.strip(s, '{}'), filter(lambda x: '{' in x, base_parts)))
 
-    def fn(self, flatten: bool=False, **kwargs) -> Optional[dict]:
+    def fn(self, flatten: bool=False, follow_links: bool=False, **kwargs) -> Optional[dict]:
         arg_str = '&'.join([f'{kw}={urllib.parse.quote(arg)}'
                             for kw, arg in kwargs.items() if kw not in params])
 
@@ -77,7 +94,7 @@ def _make_function(method_name: str, http_request_str: str, description: str) ->
         if arg_str:
             url = f'{url}?{arg_str}'
 
-        return self.get(url, flatten=flatten)
+        return self.get(url, flatten=flatten, follow_links=follow_links)
 
     def update_signature(fn: Callable) -> Callable:
         old_sig: inspect.Signature = inspect.signature(fn)
