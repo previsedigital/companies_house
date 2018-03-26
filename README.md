@@ -1,9 +1,4 @@
-
-# Companies' House API
-When running for the first time, or when the API has changed, 
-run `update.py` to re-download the API definition. 
-When running the API, this documentation is updated automatically.
-
+# Companies' House Python API
 Simply create an API client as an instance of CompaniesHouseAPI:
 ```
 from companies_house.api import CompaniesHouseAPI
@@ -144,3 +139,6 @@ class CompaniesHouseAPI(CompaniesHouseAPIBase)
 
 
 ```
+When the API has changed, 
+run `update.py` to re-download the API definition. 
+When running the API, this documentation is updated automatically.

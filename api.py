@@ -75,12 +75,7 @@ def _update_readme(api: type, path: str=os.path.join(os.path.dirname(__file__), 
     r = SimpleRecorder()
     h = Helper(output=r)
     h.help(api)
-    readme = f'''
-# Companies' House API
-When running for the first time, or when the API has changed, 
-run `update.py` to re-download the API definition. 
-When running the API, this documentation is updated automatically.
-
+    readme = f'''# Companies' House Python API
 Simply create an API client as an instance of CompaniesHouseAPI:
 ```
 from companies_house.api import CompaniesHouseAPI
@@ -96,6 +91,9 @@ help(CompaniesHouseAPI)
 ```
 {r.text}
 ```
+When the API has changed, 
+run `update.py` to re-download the API definition. 
+When running the API, this documentation is updated automatically.
 '''
     with open(path, 'w') as f:
         f.write(readme)
@@ -104,6 +102,10 @@ help(CompaniesHouseAPI)
 def generate_api(
         path: str=os.path.join(os.path.dirname(__file__), 'definition.csv')
 ) -> Type[CompaniesHouseAPIBase]:
+
+    if not os.path.isfile(path):
+        from update import update
+        update(path=path)
 
     definition = csv.DictReader(open(path))
 
@@ -119,4 +121,4 @@ def generate_api(
     return api_class
 
 
-CompaniesHouseAPI: Type[CompaniesHouseAPIBase] = generate_api()
+CompaniesHouseAPI = generate_api()
