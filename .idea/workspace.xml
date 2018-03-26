@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59e370a7-20bf-4588-a091-4f0d40ad1872" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change beforePath="$PROJECT_DIR$/api.py" afterPath="$PROJECT_DIR$/api.py" />
       <change beforePath="$PROJECT_DIR$/tests/test_api.py" afterPath="$PROJECT_DIR$/tests/test_api.py" />
-      <change beforePath="$PROJECT_DIR$/update.py" afterPath="$PROJECT_DIR$/update.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +16,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/companies_house$Unittests_in_test_update_py.coverage" NAME="Unittests in test_update.py Coverage Results" MODIFIED="1522056600346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/companies_house$Unittests_in_test_api_py.coverage" NAME="Unittests in test_api.py Coverage Results" MODIFIED="1522065120229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/companies_house$Unittests_in_test_api_py.coverage" NAME="Unittests in test_api.py Coverage Results" MODIFIED="1522085178770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
@@ -35,24 +35,11 @@
           <file leaf-file-name="api.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/api.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="538">
-                  <caret line="124" column="0" lean-forward="true" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+                <state relative-caret-position="289">
+                  <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
                   <folding>
-                    <element signature="e#0#24#0" expanded="true" />
+                    <element signature="e#0#16#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/README.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="511">
-                    <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
-                    <folding />
-                  </first_editor>
-                  <second_editor />
                 </state>
               </provider>
             </entry>
@@ -71,7 +58,7 @@
             <entry file="file://$PROJECT_DIR$/update.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="240">
-                  <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+                  <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                   </folding>
@@ -83,14 +70,27 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="test_api.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="test_api.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/test_api.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+                <state relative-caret-position="405">
+                  <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="SPLIT">
+                  <first_editor relative-caret-position="485">
+                    <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+                    <folding />
+                  </first_editor>
+                  <second_editor />
                 </state>
               </provider>
             </entry>
@@ -99,7 +99,7 @@
             <entry file="file://$PROJECT_DIR$/tests/test_update.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="120">
-                  <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+                  <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
                   </folding>
@@ -111,7 +111,7 @@
             <entry file="file://$PROJECT_DIR$/definition.csv">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="345">
-                  <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+                  <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
                   <folding />
                 </state>
               </provider>
@@ -152,6 +152,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/update.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/pretty_print.py" />
         <option value="$PROJECT_DIR$/api.py" />
         <option value="$PROJECT_DIR$/tests/test_api.py" />
       </list>
@@ -163,7 +164,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
@@ -339,47 +340,47 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522053356633</updated>
-      <workItem from="1522053358361" duration="9544000" />
+      <workItem from="1522053358361" duration="15157000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 12h 36m 46s.xml">
+    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 18h 11m 41s.xml">
       <configuration name="Unittests in test_api.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 12h 37m 24s.xml">
+    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 18h 17m 04s.xml">
       <configuration name="Unittests in test_api.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 12h 37m 43s.xml">
+    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 18h 21m 58s.xml">
       <configuration name="Unittests in test_api.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 12h 38m 04s.xml">
+    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 18h 22m 13s.xml">
       <configuration name="Unittests in test_api.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 12h 38m 58s.xml">
+    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 18h 24m 01s.xml">
       <configuration name="Unittests in test_api.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 12h 39m 53s.xml">
+    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 18h 24m 03s.xml">
       <configuration name="Unittests in test_api.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 12h 42m 08s.xml">
+    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 18h 24m 29s.xml">
       <configuration name="Unittests in test_api.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 12h 43m 26s.xml">
+    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 18h 25m 47s.xml">
       <configuration name="Unittests in test_api.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 12h 43m 57s.xml">
+    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 18h 26m 08s.xml">
       <configuration name="Unittests in test_api.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 12h 52m 08s.xml">
+    <history-entry file="Unittests_in_test_api_py - 2018.03.26 at 18h 26m 19s.xml">
       <configuration name="Unittests in test_api.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9544000" />
+    <option name="totallyTimeSpent" value="15157000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -391,7 +392,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41760492" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24155578" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13614164" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -419,9 +420,23 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>arg_str</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>arg_str = '&amp;'.join([f'{kw}={urllib.parse.quote(arg)}'                             for kw, arg in kwargs.items() if kw not in params])</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tests/__init__.py">
@@ -435,7 +450,7 @@
     <entry file="file://$PROJECT_DIR$/definition.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+          <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -443,7 +458,7 @@
     <entry file="file://$PROJECT_DIR$/tests/test_update.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -466,6 +481,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -477,17 +500,59 @@
     <entry file="file://$PROJECT_DIR$/update.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_api.py">
+    <entry file="file://$PROJECT_DIR$/pretty_print.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="652" column="0" lean-forward="false" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/inspect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="2733" column="39" lean-forward="true" selection-start-line="2733" selection-start-column="39" selection-end-line="2733" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../previse-app/.venv/lib/python3.6/functools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="43" column="4" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -497,29 +562,11 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="511">
+          <first_editor relative-caret-position="485">
             <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="124" column="0" lean-forward="true" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

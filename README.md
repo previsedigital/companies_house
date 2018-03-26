@@ -22,95 +22,108 @@ class CompaniesHouseAPI(CompaniesHouseAPIBase)
  |  
  |  Methods defined here:
  |  
- |  company(self, **kwargs) -> Union[dict, NoneType]
- |      Get the basic company information (get)
+ |  get_company(self, company_number:str, **kwargs) -> Union[dict, NoneType]
+ |      Get the basic company information
  |      :param company_number:
  |  
- |  company_charges(self, **kwargs) -> Union[dict, NoneType]
- |      Get a single charge for a company (get)
+ |  get_company_charges(self, company_number:str, charge_id:str, **kwargs) -> Union[dict, NoneType]
+ |      Get a single charge for a company
  |      :param company_number:
  |      :param charge_id:
  |  
- |  company_exemptions(self, **kwargs) -> Union[dict, NoneType]
- |      Get the company exemptions information. (get)
+ |  get_company_exemptions(self, company_number:str, **kwargs) -> Union[dict, NoneType]
+ |      Get the company exemptions information.
  |      :param company_number:
  |  
- |  company_filing_history(self, **kwargs) -> Union[dict, NoneType]
- |      Get the filing history of the company (list)
+ |  get_company_filing_history(self, company_number:str, transaction_id:str, **kwargs) -> Union[dict, NoneType]
+ |      Get the filing history of the company
+ |      :param company_number:
+ |      :param transaction_id:
+ |  
+ |  get_company_insolvency(self, company_number:str, **kwargs) -> Union[dict, NoneType]
+ |      Get company insolvency information
  |      :param company_number:
  |  
- |  company_insolvency(self, **kwargs) -> Union[dict, NoneType]
- |      Get company insolvency information (get)
- |      :param company_number:
- |  
- |  company_officers(self, **kwargs) -> Union[dict, NoneType]
- |      List the company officers (list)
- |      :param company_number:
- |  
- |  company_persons_with_significant_control(self, **kwargs) -> Union[dict, NoneType]
- |      List the company persons with significant control (list)
- |      :param company_number:
- |  
- |  company_persons_with_significant_control_corporate_entity(self, **kwargs) -> Union[dict, NoneType]
- |      Get the corporate entity with significant control (get corporate entities)
+ |  get_company_persons_with_significant_control_corporate_entity(self, company_number:str, psc_id:str, **kwargs) -> Union[dict, NoneType]
+ |      Get the corporate entity with significant control
  |      :param company_number:
  |      :param psc_id:
  |  
- |  company_persons_with_significant_control_individual(self, **kwargs) -> Union[dict, NoneType]
- |      Get the individual person with significant control (get individual)
+ |  get_company_persons_with_significant_control_individual(self, company_number:str, psc_id:str, **kwargs) -> Union[dict, NoneType]
+ |      Get the individual person with significant control
  |      :param company_number:
  |      :param psc_id:
  |  
- |  company_persons_with_significant_control_legal_person(self, **kwargs) -> Union[dict, NoneType]
- |      Get the legal person with significant control (get legal persons)
+ |  get_company_persons_with_significant_control_legal_person(self, company_number:str, psc_id:str, **kwargs) -> Union[dict, NoneType]
+ |      Get the legal person with significant control
  |      :param company_number:
  |      :param psc_id:
  |  
- |  company_persons_with_significant_control_statements(self, **kwargs) -> Union[dict, NoneType]
- |      Get the person with significant control statement (get statement)
+ |  get_company_persons_with_significant_control_statements(self, company_number:str, statement_id:str, **kwargs) -> Union[dict, NoneType]
+ |      Get the person with significant control statement
  |      :param company_number:
  |      :param statement_id:
  |  
- |  company_persons_with_significant_control_super_secure(self, **kwargs) -> Union[dict, NoneType]
- |      Get the super secure person with significant control (get super secure person)
+ |  get_company_persons_with_significant_control_super_secure(self, company_number:str, super_secure_id:str, **kwargs) -> Union[dict, NoneType]
+ |      Get the super secure person with significant control
  |      :param company_number:
  |      :param super_secure_id:
  |  
- |  company_registered_office_address(self, **kwargs) -> Union[dict, NoneType]
- |      Get the current address of a company (get)
+ |  get_company_registered_office_address(self, company_number:str, **kwargs) -> Union[dict, NoneType]
+ |      Get the current address of a company
  |      :param company_number:
  |  
- |  company_registers(self, **kwargs) -> Union[dict, NoneType]
- |      Get the company registers information (get)
+ |  get_company_registers(self, company_number:str, **kwargs) -> Union[dict, NoneType]
+ |      Get the company registers information
  |      :param company_number:
  |  
- |  company_uk_establishments(self, **kwargs) -> Union[dict, NoneType]
- |      Get a list of UK Establishment companies (list)
- |      :param company_number:
- |  
- |  disqualified_officers_corporate(self, **kwargs) -> Union[dict, NoneType]
- |      Get a corporate officer's disqualifications (Get corporate)
+ |  get_disqualified_officers_corporate(self, officer_id:str, **kwargs) -> Union[dict, NoneType]
+ |      Get a corporate officer's disqualifications
  |      :param officer_id:
  |  
- |  disqualified_officers_natural(self, **kwargs) -> Union[dict, NoneType]
- |      Get a natural officer's disqualifications (Get natural)
+ |  get_disqualified_officers_natural(self, officer_id:str, **kwargs) -> Union[dict, NoneType]
+ |      Get a natural officer's disqualifications
  |      :param officer_id:
  |  
- |  officers_appointments(self, **kwargs) -> Union[dict, NoneType]
- |      List the officer appointments (list)
+ |  list_company_charges(self, company_number:str, **kwargs) -> Union[dict, NoneType]
+ |      Get a list of charges for a company
+ |      :param company_number:
+ |  
+ |  list_company_filing_history(self, company_number:str, **kwargs) -> Union[dict, NoneType]
+ |      Get the filing history of the company
+ |      :param company_number:
+ |  
+ |  list_company_officers(self, company_number:str, **kwargs) -> Union[dict, NoneType]
+ |      List the company officers
+ |      :param company_number:
+ |  
+ |  list_company_persons_with_significant_control(self, company_number:str, **kwargs) -> Union[dict, NoneType]
+ |      List the company persons with significant control
+ |      :param company_number:
+ |  
+ |  list_company_persons_with_significant_control_statements(self, company_number:str, **kwargs) -> Union[dict, NoneType]
+ |      List the company persons with significant control statements
+ |      :param company_number:
+ |  
+ |  list_company_uk_establishments(self, company_number:str, **kwargs) -> Union[dict, NoneType]
+ |      Get a list of UK Establishment companies
+ |      :param company_number:
+ |  
+ |  list_officers_appointments(self, officer_id:str, **kwargs) -> Union[dict, NoneType]
+ |      List the officer appointments
  |      :param officer_id:
  |  
  |  search(self, **kwargs) -> Union[dict, NoneType]
- |      Search Companies House (Search all)
+ |      Search Companies House
  |  
  |  search_companies(self, **kwargs) -> Union[dict, NoneType]
- |      Search companies (Search company)
+ |      Search companies
  |  
  |  search_disqualified_officers(self, **kwargs) -> Union[dict, NoneType]
- |      Search disqualified officers (Search disqualified officer)
+ |      Search disqualified officers
  |  
  |  search_officers(self, **kwargs) -> Union[dict, NoneType]
- |      Search company officers (Search officer)
+ |      Search company officers
  |  
  |  ----------------------------------------------------------------------
  |  Methods inherited from CompaniesHouseAPIBase:

@@ -1,3 +1,5 @@
+import functools
+import inspect
 from pydoc import Helper
 
 import requests
@@ -42,22 +44,48 @@ def _make_function(method_name: str, http_request_str: str, description: str) ->
     params = list(map(lambda s: str.strip(s, '{}'), filter(lambda x: '{' in x, base_parts)))
 
     def fn(self, **kwargs) -> Optional[dict]:
-        missing = list(filter(lambda x: x not in kwargs, params))
-        if missing:
-            raise Exception(f'Missing arguments: {missing}')
-        required_args = {kw: arg for kw, arg in kwargs.items() if kw in params}
         arg_str = '&'.join([f'{kw}={urllib.parse.quote(arg)}'
                             for kw, arg in kwargs.items() if kw not in params])
+
+        required_args = {kw: arg for kw, arg in kwargs.items() if kw in params}
         url = generic_url.format(**required_args)
+
         if arg_str:
             url = f'{url}?{arg_str}'
         return self.get(url)
 
+    old_sig: inspect.Signature = inspect.signature(fn)
+    sig_args = list(old_sig.parameters.values())
+
+    sig_args = [
+        sig_args[0],
+        *[inspect.Parameter(
+            param,
+            inspect.Parameter.POSITIONAL_OR_KEYWORD,
+            annotation=str
+        ) for param in params],
+        sig_args[1]
+    ]
+
+    prefix = method_name.split()[0].lower()
+    if prefix and not name.startswith(prefix):
+        name = '_'.join([prefix, name])
+
+    def wrapper(*args, **kwargs):
+        # Remap non-kwargs onto function.
+        for i, value in enumerate(args):
+            arg_def = sig_args[i]
+            kwargs[arg_def.name] = value
+
+        return fn(**kwargs)
+
     fn.__name__ = name
-    fn.__doc__ = f'{description} ({method_name})\n' + '\n'.join(
-        map(lambda param: f':param {param}:', params)
+    fn.__doc__ = description + '\n' + '\n'.join(
+        map(lambda p: f':param {p}:', params)
     )
-    return fn
+    fn.__signature__ = old_sig.replace(parameters=sig_args)
+    new_func = functools.update_wrapper(wrapper, fn)
+    return new_func
 
 
 class SimpleRecorder:
