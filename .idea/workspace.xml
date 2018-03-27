@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59e370a7-20bf-4588-a091-4f0d40ad1872" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/LICENSE.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build_upload.sh" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/companies_house/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/increment_version.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/setup.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/version.txt" />
       <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api.py" afterPath="$PROJECT_DIR$/companies_house/api.py" />
-      <change beforePath="$PROJECT_DIR$/tests/test_api.py" afterPath="$PROJECT_DIR$/tests/test_api.py" />
-      <change beforePath="$PROJECT_DIR$/tests/test_update.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/update.py" afterPath="$PROJECT_DIR$/companies_house/update.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,7 +23,7 @@
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="e#42#85#0" expanded="true" />
               </folding>
@@ -75,31 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build_upload.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="build_upload.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build_upload.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="version.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/version.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -110,9 +78,9 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="638">
-                <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+                <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
                 <folding>
-                  <marker date="1522145413070" expanded="true" signature="186:275" ph="This will give you acc...ocs/)" />
+                  <marker date="1522145489701" expanded="true" signature="186:275" ph="This will give you acc...ocs/)" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -170,7 +138,6 @@
         <option value="$PROJECT_DIR$/pretty_print.py" />
         <option value="$PROJECT_DIR$/api.py" />
         <option value="$PROJECT_DIR$/LICENCE.txt" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/increment_version.py" />
         <option value="$PROJECT_DIR$/tests/test_update.py" />
         <option value="$PROJECT_DIR$/tests/test_api.py" />
@@ -180,6 +147,7 @@
         <option value="$PROJECT_DIR$/companies_house/api.py" />
         <option value="$PROJECT_DIR$/build_upload.sh" />
         <option value="$PROJECT_DIR$/version.txt" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -223,11 +191,6 @@
               <item name="companies_house" type="b2602c69:ProjectViewProjectNode" />
               <item name="companies_house" type="462c0819:PsiDirectoryNode" />
               <item name="companies_house" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="companies_house" type="b2602c69:ProjectViewProjectNode" />
-              <item name="companies_house" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="companies_house" type="b2602c69:ProjectViewProjectNode" />
@@ -404,7 +367,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522053356633</updated>
-      <workItem from="1522053358361" duration="26849000" />
+      <workItem from="1522053358361" duration="27490000" />
     </task>
     <servers />
   </component>
@@ -441,7 +404,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26849000" />
+    <option name="totallyTimeSpent" value="27490000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="813" y="-1440" width="1278" height="1440" extended-state="0" />
@@ -592,21 +555,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="638">
-            <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+            <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
             <folding>
-              <marker date="1522145413070" expanded="true" signature="186:275" ph="This will give you acc...ocs/)" />
+              <marker date="1522145489701" expanded="true" signature="186:275" ph="This will give you acc...ocs/)" />
             </folding>
           </first_editor>
           <second_editor />
@@ -658,7 +613,7 @@
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="e#42#85#0" expanded="true" />
           </folding>
@@ -675,18 +630,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build_upload.sh">
+    <entry file="file://$PROJECT_DIR$/version.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/version.txt">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build_upload.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
