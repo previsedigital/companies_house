@@ -5,14 +5,22 @@ from companies_house.api import CompaniesHouseAPI
 ch = CompaniesHouseAPI(api_key)
 ```
 
-This will give you access to all the functions registered in the API. For full reference,
-refer to [the API documentation](https://developer.companieshouse.gov.uk/api/docs/)
+This will give you access to all the functions registered in the API. For full reference, including the available
+additional arguments (which can be passed as kwargs), please
+refer to [the official API documentation](https://developer.companieshouse.gov.uk/api/docs/).
+
+The Python wrapper additionally gives you the following functionality for each function:
+* `flatten`: Flatten the returned `dict` (to allow use in flat files, pandas etc.)
+* `follow_links`: API resources are linked by a `links` attribute. If  you set `follow_links` to true, those are
+    automatically followed and merged into the main object, to form a deeper, more comprehensive object. Use with care
+    as there are currently no checks for recursion!
+
 ```
 help(CompaniesHouseAPI)
 ```
 
 ```
-Help on class CompaniesHouseAPI in module api:
+Help on class CompaniesHouseAPI in module __main__:
 
 class CompaniesHouseAPI(CompaniesHouseAPIBase)
  |  Method resolution order:
