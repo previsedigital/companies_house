@@ -4,7 +4,6 @@ import os
 from companies_house.api import CompaniesHouseAPIBase, CompaniesHouseAPI, flatten_dict
 
 API_KEY = os.environ.get('CH_API_KEY')
-API_KEY = 'Jh3fh4L8bfMqBSGAwAEJIUHUxp95UtDiATCUO8o_'
 if not API_KEY:
     API_KEY = input('Please enter API key!\n')
 

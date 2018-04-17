@@ -82,7 +82,7 @@ def flatten_dict(d: dict, full_name: str=None, sep: str='__') -> Union[dict, lis
 
 
 def _make_function(method_name: str, http_request_str: str, description: str) -> Callable:
-    method, generic_url = list(map(lambda s: s.strip('/ '), http_request_str.split('\xa0')))
+    method, generic_url = map(lambda s: s.strip('/ '), http_request_str.split(' '))
     base_parts = list(filter(None, generic_url.split('/')))
     fn_name = '_'.join(map(lambda s: str.replace(s, '-', '_'), filter(lambda x: '{' not in x, base_parts)))
     params = list(map(lambda s: str.strip(s, '{}'), filter(lambda x: '{' in x, base_parts)))
