@@ -20,7 +20,7 @@ help(CompaniesHouseAPI)
 ```
 
 ```
-Help on class CompaniesHouseAPI in module companies_house.api:
+Help on class CompaniesHouseAPI in module __main__:
 
 class CompaniesHouseAPI(CompaniesHouseAPIBase)
  |  Method resolution order:
