@@ -4,7 +4,7 @@ from typing import List
 
 
 def update(
-        url: str='https://developer.companieshouse.gov.uk/api/docs/',
+        url: str='https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference',
         path: str=os.path.join(os.path.dirname(__file__), 'definition.csv')
 ) -> None:
     dfs: List[pd.DataFrame] = pd.read_html(url, encoding='utf-8')
