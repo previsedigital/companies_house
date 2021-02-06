@@ -197,7 +197,7 @@ def generate_api(
     with open(path, encoding='utf-8') as f:
         definition = csv.DictReader(f)
         for line in definition:
-            fn = _make_function(line['Method'], line['HTTP Request'], line['Description'])
+            fn = _make_function(line['Operation'], line['HTTP Request'], line['Description'])
             functions[fn.__name__] = fn
 
     api_class: Type[CompaniesHouseAPIBase] = \
