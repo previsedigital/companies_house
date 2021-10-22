@@ -11,8 +11,7 @@ import os
 
 from typing import Optional, Callable, Type, Union
 
-
-DEFAULT_README_PATH: str = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, 'README.md'))
+from companies_house.constants import DEFAULT_DEFINITIONS_FILE
 
 
 class CompaniesHouseAPIBase:
@@ -138,56 +137,7 @@ def _make_function(method_name: str, http_request_str: str, description: str) ->
     return update_signature(fn)
 
 
-class SimpleRecorder:
-    def __init__(self):
-        self.text = ''
-
-    def clear(self):
-        self.text = ''
-
-    def write(self, text):
-        self.text += text
-
-
-def _update_readme(api: type, path: str=DEFAULT_README_PATH):
-    r = SimpleRecorder()
-    h = Helper(output=r)
-    h.help(api)
-    readme = f'''# Companies' House Python API
-Simply create an API client as an instance of CompaniesHouseAPI:
-```
-from companies_house.api import CompaniesHouseAPI
-ch = CompaniesHouseAPI(api_key)
-```
-
-This will give you access to all the functions registered in the API. For full reference, including the available
-additional arguments (which can be passed as kwargs), please
-refer to [the official API documentation](https://developer.companieshouse.gov.uk/api/docs/).
-
-The Python wrapper additionally gives you the following functionality for each function:
-* `flatten`: Flatten the returned `dict` (to allow use in flat files, pandas etc.)
-* `follow_links`: API resources are linked by a `links` attribute. If  you set `follow_links` to true, those are
-    automatically followed and merged into the main object, to form a deeper, more comprehensive object. Use with care
-    as there are currently no checks for recursion!
-
-```
-help(CompaniesHouseAPI)
-```
-
-```
-{r.text}
-```
-When the API has changed, 
-run `update.py` to re-download the API definition. 
-When running the API, this documentation is updated automatically.
-'''
-    with open(path, 'w') as f:
-        f.write(readme)
-
-
-def generate_api(
-        path: str=os.path.join(os.path.dirname(__file__), 'definition.csv'), force_update: bool=False
-) -> Type[CompaniesHouseAPIBase]:
+def generate_api(path: str, force_update: bool=False) -> Type[CompaniesHouseAPIBase]:
 
     if not os.path.isfile(path) or force_update:
         from companies_house.update import update
@@ -197,14 +147,16 @@ def generate_api(
     with open(path, encoding='utf-8') as f:
         definition = csv.DictReader(f)
         for line in definition:
-            fn = _make_function(line['Method'], line['HTTP Request'], line['Description'])
+            fn = _make_function(line['Operation'], line['HTTP Request'], line['Description'])
             functions[fn.__name__] = fn
 
-    api_class: Type[CompaniesHouseAPIBase] = \
-        type('CompaniesHouseAPI', (CompaniesHouseAPIBase,), functions)
-    
-    _update_readme(api_class)
+    api_class: Type[CompaniesHouseAPIBase] = type(
+        'CompaniesHouseAPI', 
+        (CompaniesHouseAPIBase,), 
+        functions
+    )
+
     return api_class
 
 
-CompaniesHouseAPI = generate_api()
+CompaniesHouseAPI = generate_api(path=DEFAULT_DEFINITIONS_FILE)

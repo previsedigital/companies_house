@@ -1,11 +1,11 @@
-import os
 import pandas as pd
 from typing import List
 
+from companies_house.constants import DEFAULT_DEFINITIONS_FILE
 
 def update(
-        url: str='https://developer.companieshouse.gov.uk/api/docs/',
-        path: str=os.path.join(os.path.dirname(__file__), 'definition.csv')
+        url: str = 'https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference',
+        path: str = DEFAULT_DEFINITIONS_FILE
 ) -> None:
     dfs: List[pd.DataFrame] = pd.read_html(url, encoding='utf-8')
     df: pd.DataFrame = pd.concat(dfs)
