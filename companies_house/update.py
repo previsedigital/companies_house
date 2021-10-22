@@ -1,7 +1,7 @@
 import pandas as pd
 from typing import List
 
-from constants import DEFAULT_DEFINITIONS_FILE
+from companies_house.constants import DEFAULT_DEFINITIONS_FILE
 
 def update(
         url: str = 'https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference',

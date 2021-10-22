@@ -11,7 +11,7 @@ import os
 
 from typing import Optional, Callable, Type, Union
 
-from constants import DEFAULT_DEFINITIONS_FILE, DEFAULT_README_PATH
+from companies_house.constants import DEFAULT_DEFINITIONS_FILE, DEFAULT_README_PATH
 
 
 class CompaniesHouseAPIBase:
