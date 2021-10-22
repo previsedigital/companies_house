@@ -11,8 +11,7 @@ import os
 
 from typing import Optional, Callable, Type, Union
 
-
-DEFAULT_README_PATH: str = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, 'README.md'))
+from constants import DEFAULT_DEFINITIONS_FILE, DEFAULT_README_PATH
 
 
 class CompaniesHouseAPIBase:
@@ -185,9 +184,7 @@ When running the API, this documentation is updated automatically.
         f.write(readme)
 
 
-def generate_api(
-        path: str=os.path.join(os.path.dirname(__file__), 'definition.csv'), force_update: bool=False
-) -> Type[CompaniesHouseAPIBase]:
+def generate_api(path: str, force_update: bool=False) -> Type[CompaniesHouseAPIBase]:
 
     if not os.path.isfile(path) or force_update:
         from companies_house.update import update
@@ -207,4 +204,4 @@ def generate_api(
     return api_class
 
 
-CompaniesHouseAPI = generate_api()
+CompaniesHouseAPI = generate_api(path=DEFAULT_DEFINITIONS_FILE)
